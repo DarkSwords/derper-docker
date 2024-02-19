@@ -11,6 +11,19 @@
 ```bash
 docker run -e DERP_DOMAIN=derper.your-domain.com -p 80:80 -p 443:443 -p 3478:3478/udp fredliang/derper
 ```
+```yaml
+version: '3'
+services:
+  derper:
+    image: fredliang/derper
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3478:3478/udp"
+    environment:
+      - DERP_DOMAIN=derper.your-domain.com
+
+```
 
 | env                 | required | description                                                            | default value     |
 | ------------------- | -------- | ---------------------------------------------------------------------- | ----------------- |

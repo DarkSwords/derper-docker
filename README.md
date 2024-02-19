@@ -11,7 +11,7 @@
 ```bash
 docker run -e DERP_DOMAIN=derper.your-domain.com -p 80:80 -p 443:443 -p 3478:3478/udp fredliang/derper
 ```
-```yaml
+```bash
 version: '3'
 services:
   derper:
